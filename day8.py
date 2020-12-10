@@ -61,8 +61,7 @@ def main(args: List[str]) -> int:
         #evaluate:
         if evaluate(reg2,opr,int(int2),registrar):
             registrar[reg1] += action(act,int(int1))
-        if max(registrar.values()) > true_max:
-            true_max = max(registrar.values())
+            true_max = max(true_max,max(registrar.values()))
     print(f'max: {max(registrar.values())}, true_max: {true_max}\n{registrar}')
     return 0
 
